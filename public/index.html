@@ -23,6 +23,16 @@
       socket.on("msg", (payload) => {
         console.log("Msg from server: ", payload);
       });
+
+      socket.on("new-message", (payload) => {
+        console.log("Msg from server: ", payload);
+      });
+
+      socket.on("active-bands", (payload) => {
+        console.clear();
+        console.log("Bands loades from server:");
+        console.table(payload);
+      });
     </script>
   </body>
 </html>
